@@ -65,10 +65,10 @@ smn1 <- function(group=c("sudo","docker"), scratch.folder, data.folder, threads=
   system(paste("cp idinfo.txt ", scrat_tmp.folder,sep=""))
   #executing the docker job
   if(group=="sudo"){
-    params <- paste("--cidfile ",data.folder,"/dockerID -v ",scrat_tmp.folder,":/scratch -v ", data.folder, ":/data -d docker.io/rcaloger/diaseqbox.2017.01 sh /bin/SMN1_CNV/bin/mapNEB.sh /bin/SMN1_CNV/ref/panel_1_merged_6_noSMN2.slop250.fasta ", fastq.names[1], " ", fastq.names[2], " ", threads, sep="")
+    params <- paste("--cidfile ",data.folder,"/dockerID -v ",scrat_tmp.folder,":/scratch -v ", data.folder, ":/data -d docker.io/rcaloger/diaseqbox.2017.01 sh /bin/smn1.sh ", fastq.names[1], " ", fastq.names[2], " ", threads, sep="")
     resultRun <- runDocker(group="sudo",container="docker.io/rcaloger/diaseqbox.2017.01", params=params)
   }else{
-    params <- paste("--cidfile ",data.folder,"/dockerID -v ",scrat_tmp.folder,":/scratch -v ", data.folder, ":/data -d docker.io/rcaloger/diaseqbox.2017.01 sh /bin/SMN1_CNV/bin/mapNEB.sh /bin/SMN1_CNV/ref/panel_1_merged_6_noSMN2.slop250.fasta ", fastq.names[1], " ", fastq.names[2], " ", threads, sep="")
+    params <- paste("--cidfile ",data.folder,"/dockerID -v ",scrat_tmp.folder,":/scratch -v ", data.folder, ":/data -d docker.io/rcaloger/diaseqbox.2017.01 sh /bin/smn1.sh ", fastq.names[1], " ", fastq.names[2], " ", threads, sep="")
     resultRun <- runDocker(group="docker",container="docker.io/rcaloger/diaseqbox.2017.01", params=params)
   }
   #waiting for the end of the container work

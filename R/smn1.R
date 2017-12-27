@@ -103,10 +103,10 @@ smn1 <- function(group=c("sudo","docker"), scratch.folder, data.folder, threads=
   system(paste("docker rm ", container.id, sep=""))
   #removing temporary folder
   cat("\n\nRemoving the temporary file ....\n")
-  system(paste("rm -R ",scrat_tmp.folder))
-  system("rm -fR out.info")
-  system("rm -fR dockerID")
-  system("rm  -fR tempFolderID")
-  system(paste("cp ",paste(path.package(package="DiaseqBox"),"containers/containers.txt",sep="/")," ",data.folder, sep=""))
+#  system(paste("rm -R ",scrat_tmp.folder))
+#  system("rm -fR out.info")
+#  system("rm -fR dockerID")
+#  system("rm  -fR tempFolderID")
+#  system(paste("cp ",paste(path.package(package="DiaseqBox"),"containers/containers.txt",sep="/")," ",data.folder, sep=""))
   setwd(home)
 }

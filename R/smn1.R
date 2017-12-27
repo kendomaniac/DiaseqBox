@@ -12,7 +12,7 @@
 #'     unzip(smn1_test.zip)
 #'     system("cd smn1_test/110259_deleted")
 #'     #running smn1
-#'     smn1(group="docker", scratch.folder="/data/scratch", data.folder=getwd(), threads=4)
+#'     smn1(group="docker", scratch.folder="/data/scratch", data.folder=getwd(), threads=8)
 #' }
 #'
 #' @export

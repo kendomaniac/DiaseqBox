@@ -13,7 +13,7 @@
 #' @export
 downloadContainers <- function(group="docker", containers.file=NULL){
    if(is.null(containers.file)){
-     containers.file=paste(path.package(package="docker4seq"),"containers/containers.txt",sep="/")
+     containers.file=paste(path.package(package="DiaseqBox"),"containers/containers.txt",sep="/")
    }
    containers <- readLines(containers.file)
    for(i in containers){

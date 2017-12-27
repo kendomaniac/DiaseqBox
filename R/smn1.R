@@ -8,6 +8,9 @@
 #' 
 #' @examples
 #' \dontrun{
+#'     system("wget http://130.192.119.59/public/smn1_test.zip)
+#'     unzip(smn1_test.zip)
+#'     system("cd smn1_test/110259_deleted")
 #'     #running smn1
 #'     smn1(group="docker", scratch.folder="/data/scratch", data.folder=getwd(), threads=4)
 #' }

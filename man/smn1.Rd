@@ -18,13 +18,6 @@ smn1(group = c("sudo", "docker"), scratch.folder, data.folder, threads = 4)
 \description{
 This function executes a docker that produces as output for the PG SMN1 pipeline
 }
-\examples{
-\dontrun{
-    #running smn1
-    smn1(group="docker", scratch.folder="/data/scratch", data.folder=getwd(), threads=4)
-}
-
-}
 \author{
 Raffaele Calogero,raffaele.calogero [at] unito [dot] com, University of Torino
 }

@@ -1,10 +1,10 @@
 # DiaseqBox
 A collection of functions to execute molecular genetics analysis based on Illumina short reads panels.
-To install it you can use use **devtools**:
+To install it you can use use **devtools**, after you have requested an access token to raffaele[dot]calogero[at]unito[dot]it:
 ```
 install.packages("devtools")
 library(devtools)
-install_github("kendomaniac/DiaseqBox", ref="master")
+install_github("kendomaniac/DiaseqBox", ref="master", auth_token="replace this text with the token")
 ```
 
 ## Requirements

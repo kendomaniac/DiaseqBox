@@ -8,7 +8,7 @@
 #' 
 #' @examples
 #' \dontrun{
-#'     system("wget http://130.192.119.59/public/smn1_test.zip)
+#'     system("wget http://130.192.119.59/public/smn1_test.zip")
 #'     unzip(smn1_test.zip)
 #'     system("cd smn1_test/110259_deleted")
 #'     #running smn1
@@ -42,7 +42,7 @@ smn1 <- function(group=c("sudo","docker"), scratch.folder, data.folder, threads=
   }
   #getting info on data 
   dir <- dir(data.folder)
-  if(length(grep("fastq.gz$", dir)!=2)){
+  if(length(grep("fastq.gz$", dir))!=2){
     cat("It seems that fastq.gz files are missing")
     return(4)
   }else{
@@ -52,7 +52,7 @@ smn1 <- function(group=c("sudo","docker"), scratch.folder, data.folder, threads=
       fastq.names[i] <- dir[fastq.loc[i]]
     }
   }
-  if(length(grep("idinfo.txt$", dir)!=1)){
+  if(length(grep("idinfo.txt$", dir))!=1){
     cat("It seems that idinfo.txt file is missing")
     return(5)
   }  
